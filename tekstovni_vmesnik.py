@@ -9,8 +9,8 @@ def izpis_zmage(igra):
 
 def izpis_igre(igra):
     besedilo = f""" GESLO: {igra.pravilni_del_gesla()}
-Nepravilne črke: {igra.nepravilni_ugibi()}
-Zmotiš se lahko le še {model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak}-krat."""
+Nepravilne črke: {igra.nepravilni_del_gesla()}
+Zmotiš se lahko le še {model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak()}-krat."""
     return besedilo
 
 def zahtevaj_vnos():
@@ -39,5 +39,6 @@ def pozeni_vmesnik():
         elif stanje == model.PORAZ:
             print(izpis_poraza(igra))
             break
-
+        
+#NE DELUJE PRAVILNO
 pozeni_vmesnik()
