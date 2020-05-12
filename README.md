@@ -1,7 +1,4 @@
 # Vislice01
 
 
-Ivan Vidav
-Josip Plemelj
-Jurij Vega
-Andej Bauer
+Program za igro Vislice.
