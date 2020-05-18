@@ -15,13 +15,18 @@ class Igra:
         self.crke = [z.lower() for z in crke]
 
     def napacne_crke(self):
-        napacne = [c for c in self.crke if c not in self.geslo]
-        return napacne
-
+        sez_napacnih_crk = []
+        for x in self.crke:
+            if x not in self.geslo:
+                sez_napacnih_crk.append(x)
+        return sez_napacnih_crk
 
     def pravilne_crke(self):
-        pravilne = [c for c in self.crke if c in self.geslo]
-        return pravilne
+        sez_pravilnih_crk = []
+        for x in self.crke:
+            if x in self.geslo:
+                sez_pravilnih_crk.append(x)
+        return sez_pravilnih_crk
 
     def stevilo_napak(self):
         return len(self.napacne_crke())
