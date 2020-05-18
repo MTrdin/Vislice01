@@ -2,15 +2,17 @@ import model
 
 def izpis_poraza(igra):
     #ze vemo da je prislo do poraza
-    return f"Žal si izgubil/a igro, geslo je bilo: {igra.geslo}"
+    return "Žal si izgubil/a igro, geslo je bilo: {}".format(igra.geslo)
 
 def izpis_zmage(igra):
     return f"Čestitke, uganil/a si geslo: {igra.geslo} v {len(igra.crke)} ugibih."
 
 def izpis_igre(igra):
-    besedilo = f""" GESLO: {igra.pravilni_del_gesla()}
+    besedilo = f"""==============================
+GESLO: {igra.pravilni_del_gesla()}
 Nepravilne črke: {igra.nepravilni_del_gesla()}
-Zmotiš se lahko le še {model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak()}-krat."""
+Zmotiš se lahko le še {model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak()}-krat.
+=============================="""
     return besedilo
 
 def zahtevaj_vnos():
@@ -40,5 +42,5 @@ def pozeni_vmesnik():
             print(izpis_poraza(igra))
             break
         
-#NE DELUJE PRAVILNO
+        
 pozeni_vmesnik()
