@@ -12,7 +12,7 @@ PORAZ = "X"
 class Igra:
     def __init__(self, geslo, crke=[]):
         self.geslo = geslo.upper()
-        self.crke = [z.lower() for z in crke]
+        self.crke = crke #[z.lower() for z in crke]
 
     def napacne_crke(self):
         sez_napacnih_crk = []
@@ -53,7 +53,7 @@ class Igra:
         return " ".join(self.napacne_crke())
 
     def ugibaj(self, crka):
-        crka = crka.lower()
+        crka = crka.upper()
         if crka in self.crke:
             return PONOVLJENA_CRKA
 
@@ -73,6 +73,7 @@ class Igra:
             else:
                 return NAPACNA_CRKA
 
+bazen_besed = []
 
 with open("besede.txt", encoding="utf-8") as f:
     bazen_besed = f.read().split("\n")
