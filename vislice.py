@@ -28,6 +28,6 @@ def ugibaj(id_igre):
     crka = bottle.request.forms.get("crka")
     vislice.ugibaj(id_igre, crka)
     bottle.redirect(f"/igra/{id_igre}/")
+    #neki je narobe
 
-
-botlle.run(debug=True, reloader=True)
+bottle.run(debug=True, reloader=True)
